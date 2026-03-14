@@ -1,3 +1,4 @@
+import "./global.css"; // This MUST be the first line
 import { NavigationContainer } from "@react-navigation/native";
 import AppNavigator from "./src/navigation/AppNavigator";
 
