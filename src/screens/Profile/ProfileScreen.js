@@ -16,14 +16,11 @@ export default function ProfileScreen({ navigation }) {
   return (
     <SafeAreaView className="flex-1 bg-[#F1F8E9]">
 
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false} className="pb-10">
 
         {/* HEADER */}
 
-        <LinearGradient
-          colors={["#2E7D32", "#66BB6A"]}
-          className="pb-10 pt-6 px-5 rounded-b-3xl"
-        >
+
 
           <View className="items-center">
 
@@ -31,50 +28,50 @@ export default function ProfileScreen({ navigation }) {
               source={{
                 uri: "https://cdn-icons-png.flaticon.com/512/149/149071.png"
               }}
-              style={{ width: 90, height: 90 }}
+              style={{ width: 100, height: 100 }}
               contentFit="cover"
+              className="rounded-full border-4 border-white/20"
             />
 
-            <Text className="text-white text-xl font-bold mt-3">
+            <Text className="text-green-800 text-2xl font-extrabold mt-4 tracking-tight">
               {user.name}
             </Text>
 
-            <Text className="text-green-100">
+            <Text className="text-emerald-900 font-medium text-sm mt-1 uppercase tracking-widest">
               Farmer
             </Text>
 
           </View>
 
-        </LinearGradient>
 
         {/* PERSONAL DETAILS */}
 
-        <View className="px-5 mt-6">
+        <View className="px-6 mt-8">
 
-          <Text className="text-lg font-bold text-green-900 mb-3">
+          <Text className="text-xl font-bold text-slate-800 mb-5">
             Personal Details
           </Text>
 
-          <View className="bg-white rounded-xl shadow p-4">
+          <View className="bg-white rounded-3xl p-6 shadow-sm shadow-slate-200 border border-slate-100">
 
-            <View className="flex-row justify-between mb-3">
-              <Text className="text-gray-500">Phone</Text>
-              <Text className="font-semibold">{user.phone}</Text>
+            <View className="flex-row justify-between items-center border-b border-slate-100 pb-4 mb-4">
+              <Text className="text-slate-500 font-medium">Phone</Text>
+              <Text className="text-slate-800 font-bold text-base">{user.phone}</Text>
             </View>
 
-            <View className="flex-row justify-between mb-3">
-              <Text className="text-gray-500">Location</Text>
-              <Text className="font-semibold">{user.location}</Text>
+            <View className="flex-row justify-between items-center border-b border-slate-100 pb-4 mb-4">
+              <Text className="text-slate-500 font-medium">Location</Text>
+              <Text className="text-slate-800 font-bold text-base">{user.location}</Text>
             </View>
 
-            <View className="flex-row justify-between mb-3">
-              <Text className="text-gray-500">Farm Size</Text>
-              <Text className="font-semibold">{user.farmSize}</Text>
+            <View className="flex-row justify-between items-center border-b border-slate-100 pb-4 mb-4">
+              <Text className="text-slate-500 font-medium">Farm Size</Text>
+              <Text className="text-slate-800 font-bold text-base">{user.farmSize}</Text>
             </View>
 
-            <View className="flex-row justify-between">
-              <Text className="text-gray-500">Main Crop</Text>
-              <Text className="font-semibold">{user.mainCrop}</Text>
+            <View className="flex-row justify-between items-center">
+              <Text className="text-slate-500 font-medium">Main Crop</Text>
+              <Text className="text-slate-800 font-bold text-base">{user.mainCrop}</Text>
             </View>
 
           </View>
@@ -83,43 +80,43 @@ export default function ProfileScreen({ navigation }) {
 
         {/* ACCOUNT OPTIONS */}
 
-        <View className="px-5 mt-6">
+        <View className="px-6 mt-8">
 
-          <Text className="text-lg font-bold text-green-900 mb-3">
+          <Text className="text-xl font-bold text-slate-800 mb-5">
             Account
           </Text>
 
-          <View className="bg-white rounded-xl shadow">
+          <View className="bg-white rounded-3xl shadow-sm shadow-slate-200 border border-slate-100 overflow-hidden">
 
             <Pressable
-              className="flex-row justify-between p-4 border-b border-gray-100"
+              className="flex-row justify-between items-center p-5 border-b border-slate-100"
             >
-              <Text className="text-gray-700">
+              <Text className="text-slate-700 font-semibold text-base">
                 Edit Profile
               </Text>
-              <Text className="text-green-700">
+              <Text className="text-emerald-500 font-bold text-lg">
                 {">"}
               </Text>
             </Pressable>
 
             <Pressable
-              className="flex-row justify-between p-4 border-b border-gray-100"
+              className="flex-row justify-between items-center p-5 border-b border-slate-100"
             >
-              <Text className="text-gray-700">
+              <Text className="text-slate-700 font-semibold text-base">
                 Change Password
               </Text>
-              <Text className="text-green-700">
+              <Text className="text-emerald-500 font-bold text-lg">
                 {">"}
               </Text>
             </Pressable>
 
             <Pressable
-              className="flex-row justify-between p-4"
+              className="flex-row justify-between items-center p-5"
             >
-              <Text className="text-gray-700">
+              <Text className="text-slate-700 font-semibold text-base">
                 Help & Support
               </Text>
-              <Text className="text-green-700">
+              <Text className="text-emerald-500 font-bold text-lg">
                 {">"}
               </Text>
             </Pressable>
@@ -130,28 +127,28 @@ export default function ProfileScreen({ navigation }) {
 
         {/* APP SETTINGS */}
 
-        <View className="px-5 mt-6">
+        <View className="px-6 mt-8">
 
-          <Text className="text-lg font-bold text-green-900 mb-3">
+          <Text className="text-xl font-bold text-slate-800 mb-5">
             App Settings
           </Text>
 
-          <View className="bg-white rounded-xl shadow">
+          <View className="bg-white rounded-3xl shadow-sm shadow-slate-200 border border-slate-100 overflow-hidden">
 
-            <Pressable className="flex-row justify-between p-4 border-b border-gray-100">
-              <Text className="text-gray-700">
+            <Pressable className="flex-row justify-between items-center p-5 border-b border-slate-100">
+              <Text className="text-slate-700 font-semibold text-base">
                 Notifications
               </Text>
-              <Text className="text-green-700">
+              <Text className="text-emerald-500 font-bold text-lg">
                 {">"}
               </Text>
             </Pressable>
 
-            <Pressable className="flex-row justify-between p-4">
-              <Text className="text-gray-700">
+            <Pressable className="flex-row justify-between items-center p-5">
+              <Text className="text-slate-700 font-semibold text-base">
                 Privacy Policy
               </Text>
-              <Text className="text-green-700">
+              <Text className="text-emerald-500 font-bold text-lg">
                 {">"}
               </Text>
             </Pressable>
@@ -162,16 +159,16 @@ export default function ProfileScreen({ navigation }) {
 
         {/* LOGOUT BUTTON */}
 
-        <View className="px-5 mt-8 mb-10">
+        <View className="px-6 mt-10 mb-12">
 
           <Pressable
-            className="bg-red-500 py-4 rounded-xl items-center"
+            className="bg-red-50 py-4 rounded-3xl items-center border border-red-100 shadow-sm shadow-red-50"
             onPress={() => {
               console.log("Logout");
               navigation.replace("Auth");
             }}
           >
-            <Text className="text-white font-semibold">
+            <Text className="text-red-600 font-bold text-base tracking-wide">
               Logout
             </Text>
           </Pressable>

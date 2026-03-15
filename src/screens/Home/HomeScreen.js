@@ -38,15 +38,15 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <SafeAreaView className="flex-1 bg-[#F1F8E9]">
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false} className="pb-10">
 
         {/* HEADER */}
-        <View className="px-5 pt-2 pb-4 flex-row justify-between items-center">
+        <View className="px-6 pt-5 pb-6 flex-row justify-between items-center">
           <View>
-            <Text className="text-xl font-bold text-green-800">
+            <Text className="text-3xl font-extrabold text-emerald-900 tracking-tight">
               AgroTech
             </Text>
-            <Text className="text-gray-500">
+            <Text className="text-emerald-600/80 font-medium mt-1">
               Smart Farming Assistant
             </Text>
           </View>
@@ -55,23 +55,24 @@ export default function HomeScreen({ navigation }) {
             source={{
               uri: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
             }}
-            style={{ width: 40, height: 40 }}
+            style={{ width: 44, height: 44 }}
+            className="rounded-full border-2 border-emerald-200"
           />
         </View>
 
         {/* WEATHER CARD */}
-        <View className="mx-5 bg-green-600 rounded-2xl p-5 flex-row justify-between items-center">
+        <View className="mx-6 bg-emerald-600 rounded-[28px] p-6 flex-row justify-between items-center shadow-lg shadow-emerald-200/40">
 
           <View>
-            <Text className="text-white text-lg font-semibold">
+            <Text className="text-emerald-100 text-xs font-bold tracking-widest uppercase mb-2">
               Weather Today
             </Text>
 
-            <Text className="text-white text-3xl font-bold">
+            <Text className="text-white text-5xl font-extrabold tracking-tighter mb-1">
               29°C
             </Text>
 
-            <Text className="text-green-100">
+            <Text className="text-emerald-50 font-medium text-sm">
               Humidity: 60%
             </Text>
           </View>
@@ -80,14 +81,15 @@ export default function HomeScreen({ navigation }) {
             source={{
               uri: "https://cdn-icons-png.flaticon.com/512/869/869869.png",
             }}
-            style={{ width: 70, height: 70 }}
+            style={{ width: 80, height: 80 }}
+            className="opacity-95"
           />
         </View>
 
         {/* FEATURE GRID */}
-        <View className="mt-6 px-5">
+        <View className="mt-8 px-6">
 
-          <Text className="text-lg font-bold text-green-900 mb-3">
+          <Text className="text-xl font-bold text-slate-800 mb-5">
             Smart Farming Tools
           </Text>
 
@@ -97,15 +99,15 @@ export default function HomeScreen({ navigation }) {
               <Pressable
                 key={index}
                 onPress={() => navigation.navigate(item.screen)}
-                className="bg-white w-[48%] p-4 rounded-xl mb-4 shadow"
+                className="bg-white w-[48%] py-6 px-3 rounded-3xl mb-4 shadow-sm shadow-slate-200 border border-slate-100 items-center"
               >
 
                 <Image
                   source={{ uri: item.icon }}
-                  style={{ width: 40, height: 40 }}
+                  style={{ width: 42, height: 42 }}
                 />
 
-                <Text className="mt-3 font-semibold text-gray-700">
+                <Text className="mt-4 font-bold text-slate-700 text-center text-sm">
                   {item.title}
                 </Text>
 
@@ -117,9 +119,9 @@ export default function HomeScreen({ navigation }) {
         </View>
 
         {/* QUICK ACTIONS */}
-        <View className="px-5 mt-4">
+        <View className="px-6 mt-4">
 
-          <Text className="text-lg font-bold text-green-900 mb-3">
+          <Text className="text-xl font-bold text-slate-800 mb-5">
             Quick Actions
           </Text>
 
@@ -127,41 +129,44 @@ export default function HomeScreen({ navigation }) {
 
             <Pressable
               onPress={() => navigation.navigate("Blogs")}
-              className="bg-white p-4 rounded-xl w-[31%] items-center shadow"
+              className="bg-white py-5 px-2 rounded-3xl w-[31%] items-center shadow-sm shadow-slate-200 border border-slate-100"
             >
               <Image
                 source={{
                   uri: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
                 }}
-                style={{ width: 35, height: 35 }}
+                style={{ width: 32, height: 32 }}
+                className="opacity-80"
               />
-              <Text className="mt-2 text-xs">Blogs</Text>
+              <Text className="mt-3 text-xs font-bold text-slate-600">Blogs</Text>
             </Pressable>
 
             <Pressable
               onPress={() => navigation.navigate("Chatbot")}
-              className="bg-white p-4 rounded-xl w-[31%] items-center shadow"
+              className="bg-white py-5 px-2 rounded-3xl w-[31%] items-center shadow-sm shadow-slate-200 border border-slate-100"
             >
               <Image
                 source={{
                   uri: "https://cdn-icons-png.flaticon.com/512/4712/4712109.png",
                 }}
-                style={{ width: 35, height: 35 }}
+                style={{ width: 32, height: 32 }}
+                className="opacity-80"
               />
-              <Text className="mt-2 text-xs">AI Chat</Text>
+              <Text className="mt-3 text-xs font-bold text-slate-600">AI Chat</Text>
             </Pressable>
 
             <Pressable
               onPress={() => navigation.navigate("Profile")}
-              className="bg-white p-4 rounded-xl w-[31%] items-center shadow"
+              className="bg-white py-5 px-2 rounded-3xl w-[31%] items-center shadow-sm shadow-slate-200 border border-slate-100"
             >
               <Image
                 source={{
                   uri: "https://cdn-icons-png.flaticon.com/512/1946/1946429.png",
                 }}
-                style={{ width: 35, height: 35 }}
+                style={{ width: 32, height: 32 }}
+                className="opacity-80"
               />
-              <Text className="mt-2 text-xs">Profile</Text>
+              <Text className="mt-3 text-xs font-bold text-slate-600">Profile</Text>
             </Pressable>
 
           </View>
@@ -169,26 +174,26 @@ export default function HomeScreen({ navigation }) {
         </View>
 
         {/* BLOG PREVIEW */}
-        <View className="px-5 mt-6">
+        <View className="px-6 mt-8">
 
-          <View className="flex-row justify-between items-center">
-            <Text className="text-lg font-bold text-green-900">
-              Latest Agriculture Blogs
+          <View className="flex-row justify-between items-end mb-4">
+            <Text className="text-xl font-bold text-slate-800">
+              Latest Blogs
             </Text>
 
             <Pressable onPress={() => navigation.navigate("Blogs")}>
-              <Text className="text-green-700">View All</Text>
+              <Text className="text-emerald-600 font-bold text-sm mb-1">View All</Text>
             </Pressable>
           </View>
 
-          <View className="mt-3 bg-white p-4 rounded-xl shadow">
+          <View className="mt-1 bg-white p-5 rounded-3xl shadow-sm shadow-slate-200 border border-slate-100">
 
-            <Text className="font-semibold">
+            <Text className="font-bold text-slate-800 text-base mb-1">
               Best Crops for Summer Season
             </Text>
 
-            <Text className="text-gray-500 text-sm mt-1">
-              Learn which crops provide maximum yield during summer.
+            <Text className="text-slate-500 text-sm leading-5">
+              Learn which crops provide maximum yield during summer heat.
             </Text>
 
           </View>
@@ -196,27 +201,27 @@ export default function HomeScreen({ navigation }) {
         </View>
 
         {/* MARKET PRICE PREVIEW */}
-        <View className="px-5 mt-6 mb-8">
+        <View className="px-6 mt-8 mb-12">
 
-          <Text className="text-lg font-bold text-green-900 mb-3">
+          <Text className="text-xl font-bold text-slate-800 mb-5">
             Market Prices
           </Text>
 
-          <View className="bg-white rounded-xl p-4 shadow">
+          <View className="bg-white rounded-3xl p-5 shadow-sm shadow-slate-200 border border-slate-100">
 
-            <View className="flex-row justify-between mb-2">
-              <Text>Wheat</Text>
-              <Text className="font-semibold">₹2200/q</Text>
+            <View className="flex-row justify-between items-center border-b border-slate-100 pb-3 mb-3">
+              <Text className="text-slate-700 font-semibold text-base">Wheat</Text>
+              <Text className="font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-xl overflow-hidden text-sm">₹2200/q</Text>
             </View>
 
-            <View className="flex-row justify-between mb-2">
-              <Text>Rice</Text>
-              <Text className="font-semibold">₹2100/q</Text>
+            <View className="flex-row justify-between items-center border-b border-slate-100 pb-3 mb-3">
+              <Text className="text-slate-700 font-semibold text-base">Rice</Text>
+              <Text className="font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-xl overflow-hidden text-sm">₹2100/q</Text>
             </View>
 
-            <View className="flex-row justify-between">
-              <Text>Maize</Text>
-              <Text className="font-semibold">₹1900/q</Text>
+            <View className="flex-row justify-between items-center pt-1">
+              <Text className="text-slate-700 font-semibold text-base">Maize</Text>
+              <Text className="font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-xl overflow-hidden text-sm">₹1900/q</Text>
             </View>
 
           </View>
