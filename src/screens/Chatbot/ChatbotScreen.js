@@ -106,7 +106,7 @@ export default function ChatbotScreen() {
 
       {/* INPUT AREA */}
 
-      <View className="flex-row items-center p-3 bg-white border-t border-gray-200">
+      <View className="flex-row items-center p-3 mb- bg-white border-t border-gray-200">
 
         <TextInput
           value={message}
